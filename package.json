@@ -24,6 +24,9 @@
   "dependencies": {
     "@types/body-parser": "0.0.33",
     "@types/winston": "^2.4.4",
+    "@types/gulp": "4.0.5",
+    "gulp": "3.9.1",
+    "gulp-file": "0.3.0",
     "body-parser": "1.15.2",
     "concurrently": "3.1.0",
     "express": "4.14.0",
