@@ -1,0 +1,38 @@
+{
+  "name": "CD_2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/srcindex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build.dev && concurrently \"npm run tsc\" ",
+    "build.dev": "gulp dev",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "nodemon:w": "nodemon --config",
+    "start1": "npm run build.dev && concurrently \"npm run tsc:w\" \"npm run nodemon:w \"",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/gulp": "4.0.5",
+    "gulp": "3.9.1",
+    "gulp-file": "0.3.0"
+  },
+  "dependencies": {
+    "@types/body-parser": "0.0.33",
+    "@types/winston": "^2.4.4",
+    "body-parser": "1.15.2",
+    "concurrently": "3.1.0",
+    "express": "4.14.0",
+    "inversify": "5.0.1",
+    "inversify-express-utils": "6.3.2",
+    "nodemon": "^1.18.9",
+    "reflect-metadata": "0.1.13",
+    "ts-node": "1.7.0",
+    "typescript": "~2.3.0",
+    "winston": "^3.1.0"
+  }
+}
