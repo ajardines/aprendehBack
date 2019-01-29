@@ -10,8 +10,8 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "nodemon:w": "nodemon --config",
-    "start1": "npm run build.dev && concurrently \"npm run tsc:w\" \"npm run nodemon:w \"",
-    "start": "node dist/index.js"
+    "start": "npm run build.dev && concurrently \"npm run tsc:w\" \"npm run nodemon:w \"",
+    "start1": "node dist/index.js"
   },
   "keywords": [],
   "author": "",
