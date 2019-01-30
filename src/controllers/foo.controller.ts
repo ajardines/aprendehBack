@@ -9,6 +9,6 @@ export class FooController implements interfaces.Controller {
 
   @httpGet("/")
   public index (request: Request, response: Response) {
-    response.status(200).send("<h1>Hola equipo aprenDEH</h1>");
+    response.status(200).send("<h1>Hola equipo AprenDEH</h1>");
   }
 }
