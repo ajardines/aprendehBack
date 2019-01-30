@@ -1,5 +1,6 @@
 module.exports = {
   dev: {
+    PORT:3000,
     SERVERPORT: 3000,
     DBCLIENT: "mssql",
     DBHOST: "localhost",

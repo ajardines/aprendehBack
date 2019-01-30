@@ -27,5 +27,5 @@ server.setConfig((app) => {
 });
  
 let app = server.build();
-app.listen(process.env.SERVERPORT || 3000);
+app.listen(process.env.PORT || 3000);
 log.info("App server listening on port "+ process.env.SERVERPORT +" in %s mode", process.env.SERVERPORT, process.env.NODE_ENV);
