@@ -3,10 +3,13 @@ import * as bodyParser from 'body-parser';
 import { winstonLog as log } from "./config/winston";
 import { Container } from 'inversify';
 import { interfaces, InversifyExpressServer, TYPE } from 'inversify-express-utils';
+import { config } from 'dotenv';
  
 // declare metadata by @controller annotation
 import "./controllers/foo.controller";
- 
+
+config();
+
 // set up container
 let container = new Container();
  
@@ -24,5 +27,5 @@ server.setConfig((app) => {
 });
  
 let app = server.build();
-app.listen(3000);
+app.listen(process.env.SERVERPORT || 3000);
 log.info("App server listening on port "+ process.env.SERVERPORT +" in %s mode", process.env.SERVERPORT, process.env.NODE_ENV);

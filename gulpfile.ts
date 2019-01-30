@@ -4,7 +4,7 @@ let file = require("gulp-file");
 let env = require("./env");
 
 gulp.task("dev", () => {
-  let consts = "NODE_ENV=dev" + "\n" +
+  let consts = "NODE_ENV=development" + "\n" +
                 "SERVERPORT=" + env.dev.SERVERPORT + "\n" +
                 "DBCLIENT=" + env.dev.DBCLIENT + "\n" +
                 "DBHOST=" + env.dev.DBHOST + "\n" +
@@ -14,5 +14,5 @@ gulp.task("dev", () => {
                 "DBCHARSET=" + env.dev.DBCHARSET + "\n"
 
   return file(".env", consts, { src: true })
-    .pipe(gulp.dest("./dist"));
+    .pipe(gulp.dest(""));
 });
